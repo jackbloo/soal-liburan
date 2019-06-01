@@ -48,8 +48,6 @@ function winner (cars, totalKM) {
 //code below here
 var sisa = []
 var sisa1 = []
-var total = []
-var sisa3 = []
 var newArr = []
 for(i = 0; i < cars.length; i++){
 sisa = (totalKM - cars[i][2])/cars[i][1]
