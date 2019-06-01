@@ -26,19 +26,24 @@ function palindrome(str) {
 
 function palindromeChanger(numbers) {
 // code below here
-for(i = 0; i < numbers.length;i++){
-  numbers[i] = '' + numbers[i]
-}
+newArr = []
+for( i = 0; i < numbers.length; i++){
+  var cond = true
+while(cond === true){
 for(j = 0; j < numbers.length; j++){
-  if(palindrome(numbers[j]) === true ){
-    numbers[j] = +numbers[j]
-  } else if (palindrome(numbers[j] === false)){
-      numbers[j] = +numbers[j]
-      numbers[j]++
-  }
-
+  numbers[j] = '' + numbers[j]
 }
-     return numbers
+  if(palindrome(numbers[i]) === true ){
+    cond = false
+    numbers[i] = +numbers[i]
+    console.log('ini dia ' + numbers)
+    newArr.push(parseInt(numbers[i]))
+  } else {
+   numbers[i]++
+}
+}
+}
+      return newArr
 }
 
 console.log(palindromeChanger([117, 9, 20, 30, 42]))
