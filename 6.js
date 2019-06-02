@@ -29,10 +29,10 @@ function calculateNumber(strNum) {
   var strings = strNum.split('+')
   console.log('habis split plus ' + strings)
   for(i = 0; i < strings.length; i++){
-  if(strings[i] !== ('200-200')){
+  if(!isNaN(strings[i])){
   plusArr.push(strings[i])
   console.log('ini plus ' + plusArr)
-  } else if(strings[i] === (strings[0])){
+  } else {
     minArr.push(strings[i])
     console.log(minArr)
     minArrNew = minArr[i].split('-')
@@ -46,8 +46,6 @@ function calculateNumber(strNum) {
      console.log('ini yang plus ' + totalPlus)
   }
 result = totalPlus + totalMin
-
-
 return result
     }
 
@@ -55,6 +53,3 @@ console.log(calculateNumber("1+10+100")) // 111
 console.log(calculateNumber("100")) // 100
 console.log(calculateNumber("200-200+100")) // 100
 
-  console.log(calculateNumber("1+10+100")) // 111
-  console.log(calculateNumber("100")) // 100
-  console.log(calculateNumber("200-200+100")) // 100
