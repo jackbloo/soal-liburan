@@ -36,7 +36,6 @@ for(j = 0; j < numbers.length; j++){
   if(palindrome(numbers[i]) === true ){
     cond = false
     numbers[i] = +numbers[i]
-    console.log('ini dia ' + numbers)
     newArr.push(parseInt(numbers[i]))
   } else {
    numbers[i]++

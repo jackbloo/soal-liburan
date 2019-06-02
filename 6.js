@@ -17,10 +17,44 @@ EXAMPLE:
 
 */
 
+
+
 function calculateNumber(strNum) {
-  return eval(strNum)
+  var plusArr=[]
+  var totalPlus = 0
+  var minArr = []
+  var totalMin = 0
+  var minArrNew = []
+  var result = []
+  var strings = strNum.split('+')
+  console.log('habis split plus ' + strings)
+  for(i = 0; i < strings.length; i++){
+  if(strings[i] !== ('200-200')){
+  plusArr.push(strings[i])
+  console.log('ini plus ' + plusArr)
+  } else if(strings[i] === (strings[0])){
+    minArr.push(strings[i])
+    console.log(minArr)
+    minArrNew = minArr[i].split('-')
+    console.log('ini min ' + minArrNew)
+    totalMin = parseInt(minArrNew[0] - minArrNew[1])
+    console.log('ini total min ' + totalMin)
   }
-  
+  }
+  for(j = 0; j < plusArr.length; j++){
+     totalPlus += parseInt(plusArr[j])
+     console.log('ini yang plus ' + totalPlus)
+  }
+result = totalPlus + totalMin
+
+
+return result
+    }
+
+console.log(calculateNumber("1+10+100")) // 111
+console.log(calculateNumber("100")) // 100
+console.log(calculateNumber("200-200+100")) // 100
+
   console.log(calculateNumber("1+10+100")) // 111
   console.log(calculateNumber("100")) // 100
   console.log(calculateNumber("200-200+100")) // 100
