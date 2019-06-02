@@ -34,20 +34,20 @@ function firstArrived(cars) {
   var result = []
   for(i = 0; i < cars.length; i++){
     if(cars[i][1] === 'kuning'){
-      kuning1.push(cars[i][0])
+      kuning1[kuning1.length] = cars[i][0]
     }
     if(cars[i][1] === 'merah'){
-      merah1.push(cars[i][0])
+      merah1[merah1.length] = cars[i][0]
     }
     if(cars[i][1] === 'hitam'){
-      hitam1.push(cars[i][0])
+      hitam1[hitam1.length] = cars[i][0]
     }
 
 
   }
-  result.push(kuning1)
-  result.push(merah1)
-  result.push(hitam1)
+  result[result.length] = kuning1
+  result[result.length] = merah1
+  result[result.length] = hitam1
   return result
 
 };

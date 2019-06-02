@@ -51,7 +51,7 @@ var sisa1 = []
 var newArr = []
 for(i = 0; i < cars.length; i++){
 sisa = (totalKM - cars[i][2])/cars[i][1]
-sisa1.push([sisa, cars[i][0]])
+sisa1[sisa1.length] = [sisa, cars[i][0]]
 }
 sortIqbal(sisa1)
 for(j = 0; j < cars.length; j++){

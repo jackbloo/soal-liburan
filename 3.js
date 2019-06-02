@@ -44,32 +44,29 @@ function mostCarsByState (cars) {
   for(i = 0; i < cars.length; i++){
     if (cars[i] === 'B'){
         resultB += 1
-        console.log(resultB)
         
     }if (cars[i] === 'D'){
         resultD += 1
-        console.log(resultD)
         
     }if (cars[i] === 'A'){
         resultA += 1
-        console.log(resultA)
         
     }if (cars[i] === 'C'){
         resultC += 1
-        console.log(resultC)
         
     }
   }
-  b.push(resultB/cars.length*100)
-  d.push(resultD/cars.length*100)
-  a.push(resultA/cars.length*100)
-  c.push(resultC/cars.length*100)
-  total.push(b)
-  total.push(d)
-  total.push(a)
-  total.push(c)
+  b[b.length] = resultB/cars.length*100
+  d[d.length] = resultD/cars.length*100
+  a[a.length] = resultA/cars.length*100
+  c[c.length] = resultC/cars.length*100
+  total[total.length] = b
+  total[total.length] = d
+  total[total.length] = c
+  total[total.length] = a
   return total
-};
+}
+console.log(mostCarsByState(['B', 'D', 'B', 'B', 'A', 'C', 'D']));
 /*
   [ 'B',
   42.857142857142854,
